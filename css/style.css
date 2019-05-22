@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 62.5%;
+    background-color: brown;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-template-rows: 35% 35%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.color{cursor: pointer;}
+
+.celeste{background-color: #22a6b3; border-top-left-radius: 100%;}
+.celeste.light{background-color: #7ed6df}
+.violeta{background-color: #be2edd; border-top-right-radius: 100%;}
+.violeta.light{background-color: #e056fd}
+.naranja{background-color: #f0932b; border-bottom-left-radius: 100%;}
+.naranja.light{background-color: #ffbe76}
+.verde{background-color: #6ab04c; border-bottom-right-radius: 100%;}
+.verde.light{background-color: #badc58}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    font-size: 4rem;
+    cursor: pointer;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    box-shadow: inset 0 -.5rem 1px black;
+}
+.btn--game{display: none;}
