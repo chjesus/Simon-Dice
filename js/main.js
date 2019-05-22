@@ -109,5 +109,5 @@ class Game{
 }
 
 $btn.addEventListener('click',()=>{
-    window.simonGame = new Game();
+    const simonGame = new Game();
 });
