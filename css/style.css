@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 62.5%;
+body{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    
+.wrapper{
     background-color: brown;
     width: 100%;
     height: 100vh;
@@ -16,9 +16,8 @@ body{
     grid-template-rows: 20% 80%;
     grid-template-areas: "header header"
                          "left right";
-                        }
-                        
-.title--grid{grid-area: header;}
+}
+.title--grid{grid-area: header; border-bottom:  2px solid white;}
 .container--grid{
     grid-area: left; 
     display: grid;
@@ -30,11 +29,15 @@ body{
 
 .title{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: white;
+    width: 100%;
 }
+
+.instrucciones{cursor: pointer;}
+
+.title--container{text-align: center;}
 
 h1{font-size: 2.5rem;}
 h2{font-size: 1.5rem;}
@@ -63,7 +66,6 @@ h2{font-size: 1.5rem;}
     box-shadow: 0px 0px 2rem black;
 }
 
-.options{background-color: rebeccapurple;}
 
 
 .color{cursor: pointer; border: .2rem solid black;}
@@ -83,6 +85,69 @@ h2{font-size: 1.5rem;}
 .verde{background-color: #6ab04c;}
 .verde.light{background-color: #badc58}
 
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.configuration{
+    border-radius: .3rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.configuration h1{
+    background-color: #6699CC;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+}
+
+.configuration ul{
+    list-style: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+}
+
+.configuration .buttons{
+    padding: 0 3rem 1rem;
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(2,1fr);
+    grid-template-areas: "btnGame btnOption"
+                         "btnRepeat btnRepeat";
+    grid-gap: .5rem .5rem;
+}
+
+.btn--game{grid-area: btnGame;}
+.btn--options{grid-area: btnOption;}
+.btn--repeat{grid-area: btnRepeat;}
+
+.btn{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: .5rem 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: .3rem;
+    font-size: 1rem;
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    background-color: #6699CC;
+    transform: scale(1.05);
+}
+
+.configuration h2{
+    background-color: rgba(0, 0, 0, .1);
+    color: #6c757d;
+    text-align: center;
+    padding: 1rem;
+}
+/*
 .btn{
     position: absolute;
     top: 50%;
@@ -98,4 +163,4 @@ h2{font-size: 1.5rem;}
     box-shadow: inset 0 -.5rem 1px black;
     display: none;
 }
-.btn--game{display: none;}
+.btn--game{display: none;}*/

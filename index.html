@@ -8,21 +8,43 @@
     <title>Fundamentos Javascript</title>
 </head>
 <body>
-    <div class="title title--grid">
-        <h1>Platzi - Game</h1>
-        <h2>Simon Dice</h2>
-    </div>
-    <div class="container--grid">
-        <div class="container">
-            <div id="celeste" class="color celeste" data-color="celeste"></div>
-            <div id="violeta" class="color violeta" data-color="violeta"></div>
-            <div id="naranja" class="color naranja" data-color="naranja"></div>
-            <div id="verde" class="color verde" data-color="verde"></div>
-            <div class="circle"></div>
-            <!--<input id="btn" class="btn" type="button" value="Empezar Juego">-->
+    <div class="wrapper">
+        <div class="title title--grid">
+            <div class="title--container">
+                <h1>Platzi - Game</h1>
+                <h2>Simon Dice</h2>
+            </div>
+            <h1 id="instrucciones" class="instrucciones">Instrucciones</h1>
+        </div>
+        <div class="container--grid">
+            <div class="container">
+                <div id="celeste" class="color celeste" data-color="celeste"></div>
+                <div id="violeta" class="color violeta" data-color="violeta"></div>
+                <div id="naranja" class="color naranja" data-color="naranja"></div>
+                <div id="verde" class="color verde" data-color="verde"></div>
+                <div class="circle"></div>
+                <!--<input id="btn" class="btn" type="button" value="Empezar Juego">-->
+            </div>
+        </div>
+        <div class="options options--grid">
+            <div class="configuration">
+                <h1>Configuracion del Juego</h1>
+                <ul>
+                    <li><strong>Nombre:</strong> <span id="name"></span></li>
+                    <li><strong>Puntaje:</strong> <span id="pts">0</span> puntos</li>
+                    <li><strong>Nivel:</strong> <span id="lvl">1</span></li>
+                    <li><strong>Secuencia repetidas: </strong><span id="sequence">0</span></li>
+                </ul>
+                <div class="buttons">
+                    <input class="btn btn--game" id="btn" type="button" value="Jugar">
+                    <input class="btn btn--options" type="button" value="Opciones">
+                    <input class="btn btn--repeat" id="repeat" type="button" value="Repetir Secuencia">
+                </div>
+                <h2>Resultados</h2>
+            </div>
         </div>
     </div>
-    <div class="options options--grid"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
